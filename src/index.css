@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/* -------------------------
+   🌈 Theme Setup
+------------------------- */
+@theme {
+  /* 🎨 Colors */
+  --color-primary: #2563eb;   /* Bright blue */
+  --color-secondary: #64748b; /* Slate gray */
+  --color-accent: #f59e0b;    /* Amber */
+  --color-surface: #ffffff;   /* White card */
+  --color-background: #f8fafc; /* App background */
+  --color-text: #0f172a;      /* Dark text */
+
+  /* ✍️ Typography */
+  --font-sans: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  /* 🧱 Radius & Shadow */
+  --radius-md: 8px;
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* -------------------------
+   🧠 Base Styles
+------------------------- */
+body {
+  @apply bg-[--color-background] text-[--color-text] font-[--font-sans];
+}
+
+/* -------------------------
+   🪄 Custom Reusable Classes
+------------------------- */
+
+/* Buttons */
+.btn {
+  @apply inline-flex items-center justify-center px-4 py-2 rounded-[--radius-md] font-medium transition-colors;
+}
+
+.btn-primary {
+  @apply bg-[--color-primary] text-white hover:bg-[--color-accent];
+}
+
+.btn-secondary {
+  @apply bg-[--color-secondary] text-white hover:opacity-90;
+}
+
+/* Cards */
+.card {
+  @apply bg-[--color-surface] p-4 rounded-[--radius-md] shadow-[--shadow-md];
+}
+
+/* Headings */
+.heading {
+  @apply text-4xl font-bold text-center mb-2;
+}
+
+.header-img{
+  @apply block mx-auto size-16;
+}
+
+/* Core concept */
+.core-concept{
+  @apply bg-slate-100 p-4 rounded-lg flex gap-2 justify-center
+}
+.core-concept img{
+  @apply block mx-auto size-16
+}
