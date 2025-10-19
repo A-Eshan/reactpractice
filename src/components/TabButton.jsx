@@ -1,10 +1,10 @@
 
-const TabButton = ({ children, onSelect }) => {
+const TabButton = ({ children, onSelect, isSelected }) => {
 
     return (
             <div>
                 <li className="mb-2">
-                    <button onClick={onSelect} className="p-2 bg-blue-500 text-white rounded-md cursor-pointer hover:bg-blue-600 duration-500">{children}</button>
+                    <button onClick={onSelect} className={ isSelected ? 'active' : undefined }>{children}</button>
                 </li>
             </div>
         )

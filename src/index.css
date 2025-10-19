@@ -66,3 +66,6 @@ body {
 .core-concept img{
   @apply block mx-auto size-16
 }
+button.active{
+  @apply bg-red-500 text-white
+}
